@@ -1,9 +1,10 @@
 {
-    "name": "ep1-rc-car", 
-    "desc": "kitchen sink included",
+    "name": "zerobot", 
+    "desc": "not zero zeros in a zerobot",
 
     "downloads":{
         "repos":[
+            ["https://github.com/zoobot/zerobot", "./library/motozero"],
             ["https://github.com/zoobot/robot-block-lib", "./library/core-lib"]
         ],
         "install_deps": "True"
