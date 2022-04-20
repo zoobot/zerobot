@@ -14,7 +14,7 @@
                 "role": "subscriber",
                 "topic": "/cmd_vel",
                 "folder": "motozero",
-                "library": "core-lib/motozero",
+                "library": "motozero",
                 "address": "0x76",
                 "args":{
                     "pins": {
