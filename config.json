@@ -13,7 +13,7 @@
         "motor_driver": {   
                 "role": "subscriber",
                 "topic": "/cmd_vel",
-                "folder": "core-lib/motozero",
+                "folder": "motozero",
                 "library": "motozero",
                 "address": "0x76",
                 "args":{
