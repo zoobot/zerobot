@@ -4,7 +4,6 @@
 
     "downloads":{
         "repos":[
-            ["https://github.com/zoobot/zerobot", "./library/motozero"],
             ["https://github.com/zoobot/robot-block-lib", "./library/core-lib"]
         ],
         "install_deps": "True"
@@ -14,8 +13,9 @@
         "motor_driver": {   
                 "role": "subscriber",
                 "topic": "/cmd_vel",
-                "folder": "/motozero",
+                "folder": "core-lib/motozero",
                 "library": "motozero",
+                "address": "",
                 "args":{
                     "pins": {
                         "motor1a": 24, 
