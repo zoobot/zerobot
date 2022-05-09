@@ -1,51 +1,9 @@
 
-version: '2.1'
-
-volumes:
-    ros-bin: 
-    opencv-lib: 
-    opencv-include: 
-    usr-lib:
+version: '2.1' 
 
 services:
-  ros-core:
-    image: cristidragomir97/ros-core
-    environment: 
-       - UDEV=1
-       - ROS_HOSTNAME=ros-core
-       - ROS_MASTER_URI=http://ros-core:11311
-    links: 
-      - ros-board
-      - ros-io 
-    ports:
-      - "11311:11311"
-    volumes:
-      - ros-bin:/opt/ros/noetic
-
-  ros-io:
-    depends_on:
-      - ros-core
+  zerobot:
+    build: ./
     privileged: true
-    image: cristidragomir97/ros-io
-    environment: 
-       - UDEV=1
-       - ROS_HOSTNAME=ros-io
-       - ROS_MASTER_URI=http://ros-core:11311
-       - CONFIG_REPO=https://github.com/zoobot/zerobot
-    volumes:
-      - ros-bin:/opt/ros/noetic
-    devices:
-      - "/dev:/dev"
-
-  # Visualization browser tool of repos for sensors
-  # ros-board:
-  #   depends_on:
-  #     - ros-core
-  #   image: cristidragomir97/rosboard
-  #   environment: 
-  #      - ROS_HOSTNAME=ros-board
-  #      - ROS_MASTER_URI=http://ros-core:11311
-  #   ports:
-  #     - "8888:8888"
-  #   volumes:
-  #     - ros-bin:/opt/ros/noetic
+    # environment: 
+    #   - UDEV=1
